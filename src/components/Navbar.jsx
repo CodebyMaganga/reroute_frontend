@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="flex flex-row items-center p-2 space-x-2">
         
       <FontAwesomeIcon icon={faRoute} className="text-indigo-600 text-2xl" />
-      <h1 >RerouteX</h1>
+      <h1 >RouteX</h1>
       </div>
         <div className="flex flex-row items-center space-x-6">
             <p>Home</p>
@@ -17,7 +17,7 @@ const Navbar = () => {
             <p>Join Waitlist</p>
         </div>
         <div>
-            <button  className="text-white bg-[#dd7d02] rounded-lg px-4 py-2">Get Early Access</button>
+            <button  className="text-white bg-[#dd7d02] rounded-lg px-4 py-2 cursor-pointer">Use Web Version</button>
         </div>
     </div>
   );

@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Navbar from '../components/Navbar.jsx';
 import Hero from '../components/Hero.jsx';
 import HeroTwo from '../components/Hero2.jsx';
+import HeroThree from '../components/Hero3.jsx';
+import HeroFour from '../components/Hero4.jsx';
 
 
 function LandingPage() {
@@ -17,6 +19,8 @@ function LandingPage() {
         <Navbar />
         <Hero />
         <HeroTwo />
+        <HeroThree />
+        <HeroFour />
       
     </div>
   );

@@ -69,7 +69,7 @@ const Hero = () => {
             </div>
         </div>
         <div className="w-1/2 px-5">
-            <img src='/route.jpg' className='w-1/2 h-[90%] mx-9 my-4 rounded-lg' alt="route"  />
+           <img src='/route.jpg' className='w-1/2 h-[90%] mx-9 my-4 rounded-lg' alt="route"  />
         </div>
 
     </div>
