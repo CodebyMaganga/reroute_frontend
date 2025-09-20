@@ -1,79 +1,107 @@
 
 import TextField from '@mui/material/TextField';
+import SectionWrapper from './sectionWrapper';
+
+
+
 const Hero = () => {
   return (
-    <div className="flex flex-row  justify-around space-x-6 dotted-bg">
-        <div className="w-1/2 flex  ml-8 flex-col  justify-center">
-            <div className='ml-8'>
-            <p className='text-5xl font-extrabold leading-relaxed'>Your Commute ,<br /> <span className="text-blue-500">Without the Traffic</span></p>
-            <p className="my-4">Reroute proactively monitors your daily drives and alerts you with faster options before you even step out the door.</p>
-            <div className=''>
-            <TextField
-  id="outlined-basic"
-  size="small"
-  label="Enter your email"
-  variant="outlined"
-  sx={{
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "white",   // default border
-      },
-      "&:hover fieldset": {
-        borderColor: "white",   // hover border
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "white",   // focused border
-      },
-    },
-    "& .MuiInputLabel-root": {
-      color: "white", // label color
-    },
-    "& .MuiInputBase-input": {
-      color: "white", // text color inside input
-    },
-  }}
-/>
-<button  className="text-white bg-[#dd7d02] rounded-lg px-4 mx-4 py-2">Get Early Access</button>
+    <div className="flex flex-row justify-around items-center dotted-bg px-4 py-8">
+      {/* Left Section */}
+      <div className="w-1/2 flex flex-col justify-center ml-2 sm:ml-6">
+        <div>
+        <SectionWrapper
+        className="w-full sm:w-1/2 flex flex-col justify-center ml-2 sm:ml-6"
+        variant="fadeUp"
+        delay={0}
+      >
+          <p className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-snug sm:leading-relaxed">
+            Your Commute, <br />
+            <span className="text-blue-500">Without the Traffic</span>
+          </p>
+          <p className="my-3 text-xs sm:text-sm md:text-base max-w-xs sm:max-w-md">
+            Reroute proactively monitors your daily drives and sends alerts on
+            your phone with faster options before you even step out the door.
+          </p>
 
-            </div>
-            <div className='my-6'>
-                <p className=" text-center">Mobile App coming soon</p>
-            </div>
-            <div className="flex flex-row justify-between">
-  {/* Google Play */}
-  <div className="relative h-[60px] mx-9">
-    <img
-      src="/GooglePay.png"
-      className="h-full object-contain"
-      alt="Google Play"
-    />
-    <div className="absolute inset-0 flex items-center justify-center bg-gray-800/70  rounded">
-      <p className="text-white text-sm font-semibold">Coming Soon</p>
-    </div>
-  </div>
-
-  {/* App Store */}
-  <div className="relative h-[60px] mx-9">
-    <img
-      src="/appleStore.png"
-      className="h-full object-contain"
-      alt="App Store"
-    />
-    <div className="absolute inset-0 flex items-center justify-center bg-gray-800/70 rounded">
-      <p className="text-white text-sm font-semibold">Coming Soon</p>
-    </div>
-  </div>
+          {/* Email + Button */}
+          <div className="flex flex-col sm:flex-row items-center sm:items-stretch w-full max-w-md mx-auto">
+  <TextField
+    id="outlined-basic"
+    size="small"
+    fullWidth
+    label="Enter your email"
+    variant="outlined"
+    sx={{
+      "& .MuiOutlinedInput-root": {
+        "& fieldset": { borderColor: "white" },
+        "&:hover fieldset": { borderColor: "white" },
+        "&.Mui-focused fieldset": { borderColor: "white" },
+      },
+      "& .MuiInputLabel-root": { color: "white" },
+      "& .MuiInputBase-input": { color: "white", fontSize: "0.875rem" }, // smaller font
+    }}
+  />
+  <button className="text-white bg-[#dd7d02] rounded-lg px-2 sm:px-4 py-1.5 sm:py-2 mt-2 sm:mt-0 sm:ml-3 text-xs sm:text-base">
+    Get Early Access
+  </button>
 </div>
 
 
-            </div>
-        </div>
-        <div className="w-1/2 px-5">
-           <img src='/route.jpg' className='w-1/2 h-[90%] mx-9 my-4 rounded-lg' alt="route"  />
-        </div>
+          {/* Mobile App Coming Soon */}
+          <div className="my-4">
+            <p className="text-center sm:text-left text-sm sm:text-base">
+              Mobile App coming soon
+            </p>
+          </div>
 
+          {/* Store Buttons */}
+          <div className="flex flex-row justify-center sm:justify-start gap-3 sm:gap-6">
+            {/* Google Play */}
+            <div className="relative h-[45px] sm:h-[60px] w-[120px] sm:w-[200px]">
+              <img
+                src="/GooglePay.png"
+                className="h-full w-full object-contain"
+                alt="Google Play"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-800/70 rounded">
+                <p className="text-white text-xs sm:text-sm font-semibold">
+                  Coming Soon
+                </p>
+              </div>
+            </div>
+
+            {/* App Store */}
+            <div className="relative h-[45px] sm:h-[60px] w-[120px] sm:w-[200px]">
+              <img
+                src="/appleStore.png"
+                className="h-full w-full object-contain"
+                alt="App Store"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-800/70 rounded">
+                <p className="text-white text-xs sm:text-sm font-semibold">
+                  Coming Soon
+                </p>
+              </div>
+            </div>
+          </div>
+          </SectionWrapper>
+        </div>
+      </div>
+
+      {/* Right Section */}
+      <div className="w-1/2 flex justify-center">
+        
+        <img
+          src="/route.jpg"
+          className="w-[85%] sm:w-[55%] md:w-[50%] lg:w-[45%] h-auto rounded-lg"
+          alt="route"
+        />
+      </div>
     </div>
   );
 };
+
+
 
 export default Hero;

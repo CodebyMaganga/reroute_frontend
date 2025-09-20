@@ -7,6 +7,8 @@ import Hero from '../components/Hero.jsx';
 import HeroTwo from '../components/Hero2.jsx';
 import HeroThree from '../components/Hero3.jsx';
 import HeroFour from '../components/Hero4.jsx';
+import HeroFive from '../components/Hero5.jsx';
+import Footer from '../components/Footer.jsx';
 
 
 function LandingPage() {
@@ -21,6 +23,8 @@ function LandingPage() {
         <HeroTwo />
         <HeroThree />
         <HeroFour />
+        <HeroFive />
+        <Footer />
       
     </div>
   );
