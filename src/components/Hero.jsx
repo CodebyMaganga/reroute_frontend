@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="w-1/2 flex flex-col justify-center ml-2 sm:ml-6">
         <div>
         <SectionWrapper
-        className="w-full sm:w-1/2 flex flex-col justify-center ml-2 sm:ml-6"
+        className="w-full  flex flex-col justify-center ml-2 sm:ml-6"
         variant="fadeUp"
         delay={0}
       >

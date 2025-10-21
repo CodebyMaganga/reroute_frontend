@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRoute, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -19,7 +22,7 @@ export default function Navbar() {
       <div className="flex flex-row justify-between items-center p-4">
         {/* Logo Section */}
         <div className="flex flex-row items-center space-x-2">
-          <FontAwesomeIcon icon={faRoute} className="text-indigo-600 text-2xl" />
+          <FontAwesomeIcon icon={faRoute} className="text-[#BCC3FA] text-2xl" />
           <h1 className="text-white text-xl font-semibold">RouteX</h1>
         </div>
 
@@ -32,7 +35,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop CTA Button */}
-        <div className="hidden md:block">
+        <div onClick={() => navigate('/login')} className="hidden md:block">
           <button className="text-white bg-[#dd7d02] hover:bg-[#c46d02] rounded-lg px-4 py-2 cursor-pointer transition-colors font-medium">
             Use Web Version
           </button>

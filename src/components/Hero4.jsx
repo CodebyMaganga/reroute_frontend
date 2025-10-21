@@ -26,7 +26,7 @@ const HeroFour = () => {
         </div>
 
         {/* Cards */}
-        <div className="relative z-10 flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center items-center gap-6 px-4 mt-6">
+        <div className="relative z-10 flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center items-center gap-6 px-4 ">
           <Card
             opacity={40}
             icon={locationIcon}
